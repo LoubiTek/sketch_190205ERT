@@ -64,19 +64,20 @@ void setup()
 // Draw
 void draw()
 {
-  
-  if (GameLoop == Intro)
+  if(CreditState == true)
+  {
+    CreditState();
+  }
+  else if (GameLoop == Intro)
   {
     Intro();
   }
   else Game();
-  
 }
 
 void Game()
 {
    Scene();
-   //CreditState();
    if (mousePressed == true)
    {
      Scene_1();
